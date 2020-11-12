@@ -7,6 +7,10 @@ const routerGuardarDatos = require("./routes/guardarDatos");
 
 const PORT = 3000;
 
+// middlewares
+// "{clave:"valor",array:[],objeto:{}}"
+aplicacion.use(express.json());
+
 aplicacion.use("/", routerDescripcion);
 aplicacion.use("/guardar-datos", routerGuardarDatos);
 
