@@ -9,7 +9,10 @@ const PORT = 3000;
 const routerGet = require("./routes/get");
 const routerPost = require("./routes/post");
 
-// utilizar mis rutas
+// middlewares
+app.use(express.json()) // ayuda a transformar nuestros datos recibidos en json
+
+// utilizar mis rutas - Endpoints
 app.use("/lista-usuarios", routerGet);
 app.use("/crear-usuario", routerPost);
 
