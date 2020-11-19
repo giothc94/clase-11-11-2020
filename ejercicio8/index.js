@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+const cors = require('cors');
+
 const PORT = 3000;
 
 // Aqui van mis rutas.
@@ -13,6 +15,7 @@ const routerPut = require("./routes/put");
 
 // middlewares
 app.use(express.json()) // ayuda a transformar nuestros datos recibidos en json
+app.use(cors())
 
 // utilizar mis rutas - Endpoints
 app.use("/lista-usuarios", routerGet);
